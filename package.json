@@ -23,7 +23,9 @@
     "famous-framework": "bin/famous-framework.js"
   },
   "browser": {
-    "jsdom": "./dev/build-pipeline/shims/jsdom.js"
+    "jsdom": "./dev/build-pipeline/shims/jsdom.js",
+    "famous-framework": "./lib/index.js",
+    "famous-engine": "./node_modules/famous/index.js"
   },
   "scripts": {
     "dev": "npm run local-only-bootstrap",
