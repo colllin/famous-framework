@@ -36,34 +36,20 @@
     "lint": "eslint --ignore-path .eslintignore ."
   },
   "dependencies": {
-    "async": "1.2.1",
-    "babel": "5.5.8",
-    "brfs": "^1.4.0",
-    "browserify": "10.2.4",
-    "chokidar": "1.0.3",
-    "clone": "1.0.2",
     "commander": "2.8.1",
-    "escodegen": "1.6.1",
-    "esprima": "2.2.0",
-    "estraverse": "4.1.0",
-    "express": "4.12.4",
-    "famous": "Famous/engine#v0.6.2",
-    "jsdom": "3.1.2",
-    "livereload": "0.3.7",
-    "lodash": "3.9.3",
-    "mkdirp": "0.5.1",
-    "ncp": "2.0.0",
-    "pubsub-js": "^1.5.2",
-    "recursive-readdir": "1.2.1",
-    "rimraf": "^2.4.0",
-    "watchify": "3.2.2"
+    "pubsub-js": "1.5.2"
   },
   "devDependencies": {
-    "babel-eslint": "3.1.15",
-    "eslint": "0.23.0",
-    "jsdoc": "3.3.2",
-    "smokestack": "3.3.0",
-    "tap-closer": "1.0.0",
-    "tape": "4.0.0"
+    "babelify": "6.1.2",
+    "brfs": "1.4.0",
+    "browserify": "10.2.4",
+    "browserify-css": "0.6.1",
+    "escodegen": "1.6.1",
+    "esprima": "2.4.1",
+    "estraverse": "4.1.0",
+    "famous-engine": "Famous/engine#v0.6.2",
+    "lodash.clone": "3.0.2",
+    "stringify": "3.1.0",
+    "through2": "2.0.0"
   }
 }
