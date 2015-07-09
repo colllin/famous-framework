@@ -28,10 +28,7 @@
     "famous-engine": "./node_modules/famous/index.js"
   },
   "scripts": {
-    "dev": "npm run local-only-bootstrap",
-    "browserify-build-pipeline": "browserify dev/build-pipeline/index.js -t brfs",
-    "local-only-bootstrap": "node bin/famous-framework.js local-only-bootstrap --sourceFolder=lib/core-components --destinationFolder=dev/local-workspace/build --servedFolder=dev/local-workspace --port=1618",
-    "test-build-pipeline": "node test/build-pipeline/index.spec.js",
+    "dev": "browserify -e lib/core-components/famous-demos/clickable-square/clickable-square.js -o dev/local-workspace/build/bundle.js -t [ babelify --blacklist spec.functionName ] -t brfs -t browserify-css -t stringify -t ./dev/build-pipeline/transforms/insert-requires.js -t ./dev/build-pipeline/transforms/expand-syntax.js",
     "test-runtime": "browserify test/runtime-tests/**/*.spec.js | tap-closer | smokestack",
     "test-state-manager": "browserify test/state-manager-tests/*.spec.js | tap-closer | smokestack",
     "test-utilities": "browserify test/utilities-tests/*.spec.js | tap-closer | smokestack",
