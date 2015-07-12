@@ -54,7 +54,10 @@ function loadDependency(dependencyPair, cb) {
     // The 'version' property is only required in cases where we are
     // trying to load a specific version of a dependency. In most cases
     // we can load whichever one is already available in our store.
-    if (typeof window === 'undefined') {
+    if (Config.get('loadDependencyFn')) {
+        Config.get('loadDependencyFn')(dependencyName, dependencyVersion, cb);
+    }
+    else if (typeof window === 'undefined') {
         loadDependencyFromLocalFileSystem(dependencyName, dependencyVersion, cb);
     }
     else {
